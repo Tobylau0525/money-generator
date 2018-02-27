@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Money adventure</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            var q1answer = $("#q1answer").val();
+            var q2answer = $("#q2answer").val();
+            var q3answer = $("#q3answer").val();
+            $('q1yesbutton').click(function() {
+                q1answer.val(true)
+            })
+            $('q1nobutton').click(function() {
+                q1answer.val(false)
+            })
+            $('q2yesbutton').click(function() {
+                q2answer.val(true)
+            })
+            $('q2nobutton').click(function() {
+                q2answer.val(false)
+            })
+            $('q3yesbutton').click(function() {
+                q3answer.val(true)
+            })
+            $('q3nobutton').click(function() {
+                q3answer.val(false)
+            })
+        });
+    </script>
+</head>
+
+<body>
+<h1>Welcome this is a money adventure</h1>
+<h2>One day you see a money generator on the street,but it will cost yo
+    u ten dollars to try it.Do you want to try?</h2>
+<button>Yes</button> <button>No</button> 
+</body>
+
+</html>
