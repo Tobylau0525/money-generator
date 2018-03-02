@@ -1,4 +1,62 @@
-* buttom{
-    length
-    
+body{
+  /*background:linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.1)),url(money-machine.jpg);*/
+  background-size:cover;
+  background-repeat:repeat;
 }
+
+#info,#q,#second-result,#third-result{
+  animation: colorswitch 30s infinite;/*This will set the text into different color in the time period of 15 second (red,orange yellow,green.......purple) */
+}
+@keyframes colorswitch {
+  0% {
+  color: red;
+  }
+  10%{
+  color: orange;      
+  }
+  20%{
+    color:yellow ;  
+  }
+  30%{
+     color:#bff442;
+  }
+  40%{
+      color:#41f459;
+  }
+  50%{
+      color:#41f4ac;
+  }
+  60%{
+      color:#41e2f4;
+  }
+  70%{
+      color:#417cf4;
+  }
+  75%{
+     color:#4155f4;
+  }
+  80%{
+      color:#7641f4;
+  }
+  90%{
+      color:#bff442;
+  }
+  95% {
+    color:#e541f4;
+  }
+  97%{
+     color:#ff448f; 
+      
+  }
+  100% {
+      color:red;
+      }
+}
+#button-q1,#button-q2-donate,#button-q2-spend{
+width: 300px;
+padding-top: 10px;
+padding-bottom: 10px;
+ background-color:green;
+}
+
+

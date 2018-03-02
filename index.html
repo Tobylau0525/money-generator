@@ -4,39 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <title>Money adventure</title>
+    <link rel="stylesheet" href="money-generator.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
         $(function() {
-            var q1answer = $("#q1answer").val();
-            var q2answer = $("#q2answer").val();
-            var q3answer = $("#q3answer").val();
-            $('q1yesbutton').click(function() {
-                q1answer.val(true)
-            })
-            $('q1nobutton').click(function() {
-                q1answer.val(false)
-            })
-            $('q2yesbutton').click(function() {
-                q2answer.val(true)
-            })
-            $('q2nobutton').click(function() {
-                q2answer.val(false)
-            })
-            $('q3yesbutton').click(function() {
-                q3answer.val(true)
-            })
-            $('q3nobutton').click(function() {
-                q3answer.val(false)
-            })
+            $("#button-q2-donate,#button-q2-spend").hide()
+            $("body").css("background-image", "url(money-machine.jpg)");
+            $(document).ready(function() {
+                var back = ["#ff0000", "blue", "gray", "thistle", "magenta", "cornsilk", "hot pink", "medium spring green", "dodger blue", "lime green", "dark Orange"];
+                var random = back[Math.floor(Math.random() * back.length)];
+                $('#button-q1,#button-q2-donate,#button-q2-spend').css('background', random);
+
+            });
+
+            $("#button-q1").click(function() {
+
+                var name = $("#name").val();
+                var age = $("#age").val();
+                var money = $("#money").val();
+                var fav_color = $("#fav_color").val();
+                var congrats = 'WOW!' + " Congratulations, " +
+                    name + " you got $ " + money + " dollar(s) from the money machine. " + "What do you want to do with it?";
+                console.log(congrats);
+                $("#result").html(congrats).css({ "font-size": "50px", "color": fav_color });
+
+
+                $("div").slideUp("slow", function() { $("div").hide() });
+                $("body").delay(1000).css("background-image", "url(rich-now.jpg)");
+
+                $("#button-q2-donate,#button-q2-spend").show();
+
+
+
+            });
+            $("#button-q2-donate").click(function() {
+                var name = $("#name").val();
+                var age = $("#age").val();
+                var money = $("#money").val();
+                $("#result,#button-q2-donate,#button-q2-spend").slideUp("slow", function() { $("#result,#button-q2-donate,#button-q2-spend").hide() });
+                var donate = "WOW!It turns out the homeless old man was a rich billionaire, " +
+                    name + " you will be getting $" + money + " 💰every year you have been alive,and a job from his company.";
+                console.log(donate);
+                var money_bag = age *
+                    $("#second-result").html(donate).css("font-size", "50px");
+                $("body").delay(1000).css("background-image", "url(businessman.jpg)");
+                
+                // while (i < age) {
+                //     console.log(💰)
+                    
+                // }
+
+
+
+            });
+            $("#button-q2-spend").click(function() {
+                var name = $("#name").val();
+
+                var money = $("#money").val();
+                $("#result,#button-q2-donate,#button-q2-spend").slideUp("slow", function() { $("#result,#button-q2-donate,#button-q2-spend").hide() });
+                var spend = "WOW!It turns out that the money you got from the machine was actually fake money, " +
+                    name + " you will be send to the prison.One year of prison life for every dollar(s) you got from the money machine";
+                console.log(spend);
+                $("#second-result").html(spend).css("font-size", "50px");
+                $("body").delay(1000).css("background-image", "url(prison.jpg)");
+
+            });
+
+
         });
+        
     </script>
 </head>
 
 <body>
-<h1>Welcome this is a money adventure</h1>
-<h2>One day you see a money generator on the street,but it will cost yo
-    u ten dollars to try it.Do you want to try?</h2>
-<button>Yes</button> <button>No</button> 
+    <div>
+
+        <h1 id="info">Welcome!</h1>
+        <h1 id="info">This is a money adventure</h1>
+        <h2 id="info">One day you see a money generator on the street,but it will cost you ten dollars to try it.Do you want to try?</h2>
+        <h4 id="q">What's your name?</h4><input id="name" required><br>
+        <h4 id="q">How old are you?</h4><input id="age" required><br>
+        <h4 id="q">How much do you want?</h4><input id="money" required><br>
+        <h4 id="q">What's your favorite color?</h4><input id="fav_color" required><br>
+        <button id="button-q1">Cash out</button>
+    </div>
+
+    <p id="result"></p>
+    <button id="button-q2-donate">donate half of it to the homeless old man</button><button id="button-q2-spend">spend it like you own it</button>
+    <p id="second-result"></p>
+
+
 </body>
 
 </html>
