@@ -41,38 +41,38 @@
                 var name = $("#name").val();
                 var age = $("#age").val();
                 var money = $("#money").val();
+
+
+
                 $("#result,#button-q2-donate,#button-q2-spend").slideUp("slow", function() { $("#result,#button-q2-donate,#button-q2-spend").hide() });
                 var donate = "WOW!It turns out the homeless old man was a rich billionaire, " +
-                    name + " you will be getting $" + money + " 💰every year you have been alive,and a job from his company.";
+                    name + " you will be getting 💰$" + money + "💰 every year you have been alive,and a job from his company.";
+
                 console.log(donate);
-                var money_bag = age *
-                    $("#second-result").html(donate).css("font-size", "50px");
+                // for (i = 0; i < age; i++) {
+
+                //      $("#moneybag").text("💰");
+
+                // };
+                $("#second-result").html(donate).css("font-size", "50px");
                 $("body").delay(1000).css("background-image", "url(businessman.jpg)");
-                
-                // while (i < age) {
-                //     console.log(💰)
-                    
-                // }
-
-
-
             });
             $("#button-q2-spend").click(function() {
-                var name = $("#name").val();
+            var name = $("#name").val();
+            var money = $("#money").val();
+            $("#result,#button-q2-donate,#button-q2-spend").slideUp("slow", function() { $("#result,#button-q2-donate,#button-q2-spend").hide() });
+            var spend = "WOW!It turns out that the money you got from the machine was actually fake money, " +
+                name + " you will be send to the prison."+ money +" year of prison life for every dollar(s) you got from the money machine.";
+            console.log(spend);
+            $("#second-result").html(spend).css("font-size", "50px");
+            $("body").delay(1000).css("background-image", "url(prison.jpg)");
 
-                var money = $("#money").val();
-                $("#result,#button-q2-donate,#button-q2-spend").slideUp("slow", function() { $("#result,#button-q2-donate,#button-q2-spend").hide() });
-                var spend = "WOW!It turns out that the money you got from the machine was actually fake money, " +
-                    name + " you will be send to the prison.One year of prison life for every dollar(s) you got from the money machine";
-                console.log(spend);
-                $("#second-result").html(spend).css("font-size", "50px");
-                $("body").delay(1000).css("background-image", "url(prison.jpg)");
-
-            });
-
+        });
 
         });
         
+
+        // });
     </script>
 </head>
 
@@ -92,6 +92,7 @@
     <p id="result"></p>
     <button id="button-q2-donate">donate half of it to the homeless old man</button><button id="button-q2-spend">spend it like you own it</button>
     <p id="second-result"></p>
+
 
 
 </body>
