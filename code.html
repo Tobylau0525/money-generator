@@ -32,7 +32,7 @@ If you have any other files, make sure you follow the structure below.
     <div class="container-fluid">
         <ul class="nav nav-tabs navbar-fixed-top">
             <li class="active"><a href="#index">index.html</a></li>
-            <li><a href="#style">style.css</a></li>
+            <li><a href="#style">Style.css</a></li>
         </ul>
 
         <!-- 
@@ -51,28 +51,28 @@ https://gist-it.appspot.com/github/bmuellerhstat/website-portfolio-example/raw/m
             <div id="index" class="tab-pane fade in active">
                 <script src="https://gist-it.appspot.com/github/yatchol6214/money-generator/raw/master/index.html?footer=0">index.html</script>
             </div>
-            <div id="style" class="tab-pane fade">
-                <script src="https://gist-it.appspot.com/github/yatchol6214/money-generator/raw/master/style.css?footer=0">style.css</script>
+            <div id="style" class="tab-pane fade in">
+                <script src="https://gist-it.appspot.com/github/yatchol6214/money-generator/raw/master/style.css?footer=0">sequel.html</script>
             </div>
+            
         </div>
-    </div>
 
-    <script>
-        $(document).ready(function() {
-            $(".nav-tabs a").click(function() {
-                $(this).tab('show');
-            });
-            $('.nav-tabs a').on('shown.bs.tab', function(event) {
-                var x = $(event.target).text(); // active tab
-                var y = $(event.relatedTarget).text(); // previous tab
-                $(".act span").text(x);
-                $(".prev span").text(y);
-            });
+        <script>
+            $(document).ready(function() {
+                $(".nav-tabs a").click(function() {
+                    $(this).tab('show');
+                });
+                $('.nav-tabs a').on('shown.bs.tab', function(event) {
+                    var x = $(event.target).text(); // active tab
+                    var y = $(event.relatedTarget).text(); // previous tab
+                    $(".act span").text(x);
+                    $(".prev span").text(y);
+                });
 
-            // custom code font-size (feel free to change this)
-            $('pre').css('font-size', '16px');
-        });
-    </script>
+                // custom code font-size (feel free to change this)
+                $('pre').css('font-size', '16px');
+            });
+        </script>
 
 </body>
 
