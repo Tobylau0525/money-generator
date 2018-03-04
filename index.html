@@ -11,7 +11,7 @@
             $("#button-q2-donate,#button-q2-spend").hide()
             $("body").css("background-image", "url(money-machine.jpg)");
             $(document).ready(function() {
-                var back = ["#ff0000", "blue", "gray", "thistle", "magenta", "cornsilk", "hot pink", "medium spring green", "dodger blue", "lime green", "dark Orange"];
+                var back = ["#ff0000", "blue", "gray", " orange", "purple", "yellow", "pink","#bff442","#41f459","#41f4ac","#417cf4","#7641f4","#e541f4","#ff448f"];
                 var random = back[Math.floor(Math.random() * back.length)];
                 $('#button-q1,#button-q2-donate,#button-q2-spend').css('background', random);
 
@@ -46,7 +46,7 @@
 
                 $("#result,#button-q2-donate,#button-q2-spend").slideUp("slow", function() { $("#result,#button-q2-donate,#button-q2-spend").hide() });
                 var donate = "WOW!It turns out the homeless old man was a rich billionaire, " +
-                    name + " you will be getting 💰$" + money + "💰year you have been alive,and a job from his company.";
+                    name + " you will be getting 💰$" + money + "💰 every year you have been alive,and a job from his company.";
 
                 console.log(donate);
                 // for (i = 0; i < age; i++) {
